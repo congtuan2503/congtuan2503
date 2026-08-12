@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:12968f&height=200&section=header&text=Nguyen%20Tuan&fontSize=56&fontColor=2ee6d6&fontAlignY=38&desc=Aspiring%20SOC%20%2F%20Blue%20Team%20Analyst%20%7C%20Cloud%20Security&descAlignY=58&descColor=c9d1d9&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:12968f&height=200&section=header&text=Nguyen%20Cong%20Tuan&fontSize=48&fontColor=2ee6d6&fontAlignY=38&desc=Aspiring%20SOC%20%2F%20Blue%20Team%20Analyst%20%7C%20Cloud%20Security&descAlignY=58&descColor=c9d1d9&animation=fadeIn" width="100%"/>
 
 <a href="https://www.linkedin.com/in/congtuan2503/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"/></a>
 <a href="https://kc7cyber.com/"><img src="https://img.shields.io/badge/KC7-Cyber%20Detective-ff8a3d?style=flat-square"/></a>
@@ -9,17 +9,17 @@
 
 </div>
 
-### 👋 About me
+### About me
 
-- 🎓 Third-year **Computer Science** student at **Bach Khoa University (HCMUT)**, Ho Chi Minh City
-- 🛡️ Building toward a junior **SOC / Blue Team** role, with **Cloud Security** as the longer-term goal
-- 🧪 Learn by building: homelab investigations, incident write-ups, and hands-on labs over theory alone
-- 🔭 Currently: running detection use cases in a self-built **Wazuh** SOC homelab, and sharpening investigation skills on **KC7** and **LetsDefend**
-- 📫 Reach me on [LinkedIn](https://www.linkedin.com/in/congtuan2503/)
+- Third-year **Computer Science** student at **Bach Khoa University (HCMUT)**, Ho Chi Minh City
+- Building toward a junior **SOC / Blue Team** role, with **Cloud Security** as the longer-term goal
+- Learn by building: homelab investigations, incident write-ups, and hands-on labs over theory alone
+- Currently running detection use cases in a self-built **Wazuh** SOC homelab, and sharpening investigation skills on **KC7** and **LetsDefend**
+- Reach me on [LinkedIn](https://www.linkedin.com/in/congtuan2503/)
 
 <br/>
 
-### 🧰 Toolbox
+### Toolbox
 
 <img src="https://skillicons.dev/icons?i=py,java,cpp,linux,git,aws,bash,vscode&theme=dark" />
 
@@ -27,20 +27,14 @@
 
 <br/>
 
-### 📊 GitHub stats
+### GitHub
 
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=congtuan2503&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=2ee6d6&icon_color=12968f&text_color=c9d1d9" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=congtuan2503&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=2ee6d6&text_color=c9d1d9" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=congtuan2503&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=0d1117&ring=12968f&fire=2ee6d6&currStreakLabel=2ee6d6" />
-</p>
+- [Repositories](https://github.com/congtuan2503?tab=repositories)
+- [Stars](https://github.com/congtuan2503?tab=stars)
 
 <br/>
 
-### 🕵️ Security training activity
+### Security training activity
 
 Manually logged from case work on **KC7** and **LetsDefend** — neither platform has a public API, so this graph is generated from [`activity_log.json`](./activity_log.json) in this repo and refreshed automatically by a GitHub Action whenever the log changes. See [`HUONG_DAN.md`](./HUONG_DAN.md) for how to update it.
 
@@ -50,13 +44,11 @@ Manually logged from case work on **KC7** and **LetsDefend** — neither platfor
 
 <br/>
 
-### 📌 Featured projects
+### Featured projects
 
-<p align="center">
-  <a href="https://github.com/congtuan2503/homelab-setup-writeup"><img src="https://github-readme-stats.vercel.app/api/pin/?username=congtuan2503&repo=homelab-setup-writeup&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=2ee6d6&text_color=c9d1d9" /></a>
-  <a href="https://github.com/congtuan2503/VulnScanner"><img src="https://github-readme-stats.vercel.app/api/pin/?username=congtuan2503&repo=VulnScanner&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=2ee6d6&text_color=c9d1d9" /></a>
-  <a href="https://github.com/congtuan2503/AutoSQLi"><img src="https://github-readme-stats.vercel.app/api/pin/?username=congtuan2503&repo=AutoSQLi&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=2ee6d6&text_color=c9d1d9" /></a>
-</p>
+- [**homelab-setup-writeup**](https://github.com/congtuan2503/homelab-setup-writeup) — Documentation of a SOC homelab setup with Wazuh and two endpoints.
+- [**VulnScanner**](https://github.com/congtuan2503/VulnScanner) — Automated web application security scanner.
+- [**AutoSQLi**](https://github.com/congtuan2503/AutoSQLi) — Automated SQL injection exploitation tool.
 
 <div align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:12968f,100:0d1117&height=100&section=footer" width="100%"/>
