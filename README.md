@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:12968f&height=200&section=header&text=Nguyen%20Cong%20Tuan&fontSize=48&fontColor=2ee6d6&fontAlignY=38&desc=Aspiring%20SOC%20%2F%20Blue%20Team%20Analyst%20%7C%20Cloud%20Security&descAlignY=58&descColor=c9d1d9&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:12968f&height=200&section=header&text=Nguyen%20Cong%20Tuan&fontSize=48&fontColor=2ee6d6&fontAlignY=38&desc=SOC%20%2F%20Blue%20Team%20Analyst%20%7C%20Cloud%20Security&descAlignY=58&descColor=c9d1d9&animation=fadeIn" width="100%"/>
 
 <a href="https://www.linkedin.com/in/congtuan2503/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"/></a>
 <a href="https://kc7cyber.com/"><img src="https://img.shields.io/badge/KC7-Cyber%20Detective-ff8a3d?style=flat-square"/></a>
