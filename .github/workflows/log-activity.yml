@@ -14,6 +14,10 @@ on:
         description: "How many cases/alerts today"
         required: false
         default: "1"
+      date:
+        description: "Date (YYYY-MM-DD) — leave blank for today, or set it to backfill a past day"
+        required: false
+        default: ""
       note:
         description: "Optional note (for your own reference only)"
         required: false
@@ -36,6 +40,7 @@ jobs:
         env:
           PLATFORM: ${{ inputs.platform }}
           COUNT: ${{ inputs.count }}
+          DATE: ${{ inputs.date }}
           NOTE: ${{ inputs.note }}
         run: |
           python3 log_activity.py
