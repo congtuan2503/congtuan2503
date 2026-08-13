@@ -30,7 +30,10 @@ Không cần mở file, không cần gõ JSON:
 
 1. Vào repo trên GitHub (web hoặc app) → tab **Actions** → chọn workflow **"Log activity"** → **Run workflow**.
 2. Chọn `platform` (`kc7` hoặc `letsdefend`), điền `count` (mấy case/alert hôm đó), `note` nếu muốn.
-3. Bấm **Run workflow**. Xong — nó tự thêm dòng vào `activity_log.json`, tự vẽ lại heatmap, tự commit. Mất khoảng 10-15 giây để chạy xong, F5 lại trang profile là thấy.
+3. Ô `date`: để trống nếu log cho hôm nay, hoặc điền `YYYY-MM-DD` (vd `2026-08-01`) nếu muốn **thêm bù cho ngày trước đó**.
+4. Bấm **Run workflow**. Xong — nó tự thêm dòng vào `activity_log.json`, tự vẽ lại heatmap, tự commit. Mất khoảng 10-15 giây để chạy xong, F5 lại trang profile là thấy.
+
+Muốn bù nhiều ngày liền thì chạy lại workflow nhiều lần, mỗi lần đổi `date` khác nhau.
 
 Đây là cách mình khuyên dùng hằng ngày vì gần như 1-chạm, làm được cả trên điện thoại qua app GitHub, và **không cần đăng nhập hộ vào KC7/LetsDefend** nên không có rủi ro lộ tài khoản.
 
@@ -39,6 +42,7 @@ Không cần mở file, không cần gõ JSON:
 ```bash
 python3 log_activity.py kc7
 python3 log_activity.py letsdefend 2 "SOC101 alert triage"
+python3 log_activity.py kc7 1 "backfill" --date 2026-08-01
 git add activity_log.json && git commit -m "log activity" && git push
 ```
 Push xong thì workflow `update-heatmap.yml` sẽ tự vẽ lại heatmap.
