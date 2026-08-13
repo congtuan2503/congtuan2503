@@ -36,8 +36,6 @@
 
 ### Security training activity
 
-Manually logged from case work on **KC7** and **LetsDefend** — neither platform has a public API, so this graph is generated from [`activity_log.json`](./activity_log.json) in this repo and refreshed automatically by a GitHub Action whenever the log changes. See [`HUONG_DAN.md`](./HUONG_DAN.md) for how to update it.
-
 <p align="center">
   <img src="./assets/activity_heatmap.svg" width="100%"/>
 </p>
