@@ -1,8 +1,68 @@
 [
   {
-    "date": "2026-08-12",
+    "date": "2026-07-15",
     "platform": "kc7",
     "count": 1
+  },
+  {
+    "date": "2026-07-19",
+    "platform": "kc7",
+    "count": 4
+  },
+  {
+    "date": "2026-07-20",
+    "platform": "kc7",
+    "count": 2
+  },
+  {
+    "date": "2026-07-21",
+    "platform": "kc7",
+    "count": 4
+  },
+  {
+    "date": "2026-07-22",
+    "platform": "kc7",
+    "count": 1
+  },
+  {
+    "date": "2026-07-26",
+    "platform": "kc7",
+    "count": 3
+  },
+  {
+    "date": "2026-07-27",
+    "platform": "kc7",
+    "count": 2
+  },
+  {
+    "date": "2026-07-28",
+    "platform": "kc7",
+    "count": 4
+  },
+  {
+    "date": "2026-08-01",
+    "platform": "kc7",
+    "count": 3
+  },
+  {
+    "date": "2026-08-02",
+    "platform": "kc7",
+    "count": 4
+  },
+  {
+    "date": "2026-08-03",
+    "platform": "kc7",
+    "count": 3
+  },
+  {
+    "date": "2026-08-04",
+    "platform": "kc7",
+    "count": 3
+  },
+  {
+    "date": "2026-08-12",
+    "platform": "kc7",
+    "count": 3
   },
   {
     "date": "2026-08-13",
