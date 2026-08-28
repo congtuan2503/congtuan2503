@@ -389,6 +389,10 @@
 <rect x="756" y="124" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-08-22: no activity</title></rect>
 <rect x="770" y="40" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-08-23: no activity</title></rect>
 <rect x="770" y="54" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-08-24: no activity</title></rect>
+<rect x="770" y="68" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-08-25: no activity</title></rect>
+<rect x="770" y="82" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-08-26: no activity</title></rect>
+<rect x="770" y="96" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-08-27: no activity</title></rect>
+<rect x="770" y="110" width="11" height="11" rx="2" ry="2" fill="#0d3b3f"><title>2026-08-28: 4 activity (kc7)</title></rect>
 <text x="28" y="163" fill="#8b949e" font-size="10">Less</text>
 <rect x="60" y="154" width="11" height="11" rx="2" fill="#161b22"/>
 <rect x="74" y="154" width="11" height="11" rx="2" fill="#0d3b3f"/>
@@ -396,5 +400,5 @@
 <rect x="102" y="154" width="11" height="11" rx="2" fill="#12968f"/>
 <rect x="116" y="154" width="11" height="11" rx="2" fill="#2ee6d6"/>
 <text x="134" y="163" fill="#8b949e" font-size="10">More</text>
-<text x="28" y="176" fill="#c9d1d9" font-size="10">83 logged this year   •   KC7: 83   •   LetsDefend: 0   •   current streak: 3d   •   longest streak: 4d</text>
+<text x="28" y="176" fill="#c9d1d9" font-size="10">87 logged this year   •   KC7: 87   •   LetsDefend: 0   •   current streak: 1d   •   longest streak: 4d</text>
 </svg>
