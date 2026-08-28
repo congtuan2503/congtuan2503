@@ -345,16 +345,16 @@
 <rect x="672" y="96" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-07-08: no activity</title></rect>
 <rect x="672" y="110" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-07-09: no activity</title></rect>
 <rect x="672" y="124" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-07-10: no activity</title></rect>
-<rect x="672" y="138" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-07-11: no activity</title></rect>
+<rect x="672" y="138" width="11" height="11" rx="2" ry="2" fill="#172554"><title>2026-07-11: LetsDefend: 1 cases (1 effort)</title></rect>
 <rect x="686" y="54" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-07-12: no activity</title></rect>
-<rect x="686" y="68" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-07-13: no activity</title></rect>
-<rect x="686" y="82" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-07-14: no activity</title></rect>
-<rect x="686" y="96" width="11" height="11" rx="2" ry="2" fill="#172554"><title>2026-07-15: KC7: 70 questions (4 effort)</title></rect>
-<rect x="686" y="110" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-07-16: no activity</title></rect>
+<rect x="686" y="68" width="11" height="11" rx="2" ry="2" fill="#172554"><title>2026-07-13: LetsDefend: 2 cases (2 effort)</title></rect>
+<rect x="686" y="82" width="11" height="11" rx="2" ry="2" fill="#172554"><title>2026-07-14: LetsDefend: 4 cases (4 effort)</title></rect>
+<rect x="686" y="96" width="11" height="11" rx="2" ry="2" fill="#1e40af"><title>2026-07-15: KC7: 70 questions; LetsDefend: 2 cases (6 effort)</title></rect>
+<rect x="686" y="110" width="11" height="11" rx="2" ry="2" fill="#172554"><title>2026-07-16: LetsDefend: 1 cases (1 effort)</title></rect>
 <rect x="686" y="124" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-07-17: no activity</title></rect>
-<rect x="686" y="138" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-07-18: no activity</title></rect>
-<rect x="700" y="54" width="11" height="11" rx="2" ry="2" fill="#60a5fa"><title>2026-07-19: KC7: 280 questions (16 effort)</title></rect>
-<rect x="700" y="68" width="11" height="11" rx="2" ry="2" fill="#1e40af"><title>2026-07-20: KC7: 140 questions (8 effort)</title></rect>
+<rect x="686" y="138" width="11" height="11" rx="2" ry="2" fill="#172554"><title>2026-07-18: LetsDefend: 1 cases (1 effort)</title></rect>
+<rect x="700" y="54" width="11" height="11" rx="2" ry="2" fill="#60a5fa"><title>2026-07-19: KC7: 280 questions; LetsDefend: 2 cases (18 effort)</title></rect>
+<rect x="700" y="68" width="11" height="11" rx="2" ry="2" fill="#1e40af"><title>2026-07-20: KC7: 140 questions; LetsDefend: 1 cases (9 effort)</title></rect>
 <rect x="700" y="82" width="11" height="11" rx="2" ry="2" fill="#60a5fa"><title>2026-07-21: KC7: 280 questions (16 effort)</title></rect>
 <rect x="700" y="96" width="11" height="11" rx="2" ry="2" fill="#172554"><title>2026-07-22: KC7: 70 questions (4 effort)</title></rect>
 <rect x="700" y="110" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-07-23: no activity</title></rect>
@@ -366,7 +366,7 @@
 <rect x="714" y="96" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-07-29: no activity</title></rect>
 <rect x="714" y="110" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-07-30: no activity</title></rect>
 <rect x="714" y="124" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-07-31: no activity</title></rect>
-<rect x="714" y="138" width="11" height="11" rx="2" ry="2" fill="#2563eb"><title>2026-08-01: KC7: 210 questions (12 effort)</title></rect>
+<rect x="714" y="138" width="11" height="11" rx="2" ry="2" fill="#2563eb"><title>2026-08-01: KC7: 210 questions; LetsDefend: 1 cases (13 effort)</title></rect>
 <rect x="728" y="54" width="11" height="11" rx="2" ry="2" fill="#60a5fa"><title>2026-08-02: KC7: 280 questions (16 effort)</title></rect>
 <rect x="728" y="68" width="11" height="11" rx="2" ry="2" fill="#2563eb"><title>2026-08-03: KC7: 210 questions (12 effort)</title></rect>
 <rect x="728" y="82" width="11" height="11" rx="2" ry="2" fill="#2563eb"><title>2026-08-04: KC7: 210 questions (12 effort)</title></rect>
@@ -378,7 +378,7 @@
 <rect x="742" y="68" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-08-10: no activity</title></rect>
 <rect x="742" y="82" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-08-11: no activity</title></rect>
 <rect x="742" y="96" width="11" height="11" rx="2" ry="2" fill="#2563eb"><title>2026-08-12: KC7: 210 questions (12 effort)</title></rect>
-<rect x="742" y="110" width="11" height="11" rx="2" ry="2" fill="#1e40af"><title>2026-08-13: KC7: 71 questions (4.1 effort)</title></rect>
+<rect x="742" y="110" width="11" height="11" rx="2" ry="2" fill="#172554"><title>2026-08-13: KC7: 71 questions (4.1 effort)</title></rect>
 <rect x="742" y="124" width="11" height="11" rx="2" ry="2" fill="#172554"><title>2026-08-14: KC7: 44 questions (2.5 effort)</title></rect>
 <rect x="742" y="138" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-08-15: no activity</title></rect>
 <rect x="756" y="54" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-08-16: no activity</title></rect>
@@ -401,6 +401,6 @@
 <rect x="102" y="166" width="11" height="11" rx="2" fill="#2563eb"/>
 <rect x="116" y="166" width="11" height="11" rx="2" fill="#60a5fa"/>
 <text x="134" y="175" fill="#94a3b8" font-size="10">More effort</text>
-<text x="28" y="191" fill="#e2e8f0" font-size="10">KC7: 2713 questions   •   LetsDefend: 0 cases   •   Total: 155.0 LD-case equivalent</text>
-<text x="28" y="205" fill="#94a3b8" font-size="10">current streak: 2d   •   longest streak: 4d</text>
+<text x="28" y="191" fill="#e2e8f0" font-size="10">KC7: 2713 questions   •   LetsDefend: 15 cases   •   Total: 170.0 LD-case equivalent</text>
+<text x="28" y="205" fill="#94a3b8" font-size="10">current streak: 2d   •   longest streak: 5d</text>
 </svg>

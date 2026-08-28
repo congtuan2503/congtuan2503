@@ -5,6 +5,60 @@
     "count": 70
   },
   {
+    "date": "2026-07-11",
+    "platform": "letsdefend",
+    "count": 1,
+    "note": "SOC146 - Phishing Mail Detected - Excel 4.0 Macros"
+  },
+  {
+    "date": "2026-07-13",
+    "platform": "letsdefend",
+    "count": 2,
+    "note": "SOC165 - Possible SQL Injection Payload; SOC166 - Javascript Code Detected in Requested URL"
+  },
+  {
+    "date": "2026-07-14",
+    "platform": "letsdefend",
+    "count": 4,
+    "note": "SOC167, SOC169, SOC170, SOC325"
+  },
+  {
+    "date": "2026-07-15",
+    "platform": "letsdefend",
+    "count": 2,
+    "note": "SOC168 - Whoami Command Detected; SOC282 - Phishing Alert - Deceptive Mail Detected"
+  },
+  {
+    "date": "2026-07-16",
+    "platform": "letsdefend",
+    "count": 1,
+    "note": "SOC138 - Detected Suspicious Xls File"
+  },
+  {
+    "date": "2026-07-18",
+    "platform": "letsdefend",
+    "count": 1,
+    "note": "SOC104 - Malware Detected"
+  },
+  {
+    "date": "2026-07-19",
+    "platform": "letsdefend",
+    "count": 2,
+    "note": "SOC109 - Emotet Malware Detected; SOC287 - Arbitrary File Read on Checkpoint Security Gateway"
+  },
+  {
+    "date": "2026-07-20",
+    "platform": "letsdefend",
+    "count": 1,
+    "note": "SOC145 - Ransomware Detected"
+  },
+  {
+    "date": "2026-08-01",
+    "platform": "letsdefend",
+    "count": 1,
+    "note": "SOC274 - Palo Alto PAN-OS Command Injection Vulnerability Exploitation (CVE-2024-3400)"
+  },
+  {
     "date": "2026-07-19",
     "platform": "kc7",
     "count": 280
