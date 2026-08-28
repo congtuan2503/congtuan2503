@@ -3,7 +3,7 @@
 log_activity.py — append one entry to activity_log.json without hand-editing JSON.
 
 Local usage (defaults to today if --date is omitted):
-    python3 log_activity.py kc7
+    python3 log_activity.py kc7 25 "Questions answered in DNS investigation"
     python3 log_activity.py letsdefend 2 "SOC101 alert triage"
     python3 log_activity.py kc7 1 "backfilled case" --date 2026-08-01
 
@@ -59,6 +59,8 @@ def main():
 
     if platform not in VALID_PLATFORMS:
         sys.exit(f"Unknown platform: {platform!r} (expected one of {VALID_PLATFORMS})")
+    if count <= 0:
+        sys.exit("Count must be a positive whole number")
 
     if date_str:
         try:
@@ -76,7 +78,8 @@ def main():
     data.append(entry)
     data.sort(key=lambda e: e.get("date", ""))  # keep the file readable when backfilling
     PATH.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"Logged: {entry}")
+    unit = "questions" if platform == "kc7" else "cases"
+    print(f"Logged: {entry} ({count} {unit})")
 
 
 if __name__ == "__main__":

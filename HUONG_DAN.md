@@ -29,7 +29,7 @@ congtuan2503/
 Không cần mở file, không cần gõ JSON:
 
 1. Vào repo trên GitHub (web hoặc app) → tab **Actions** → chọn workflow **"Log activity"** → **Run workflow**.
-2. Chọn `platform` (`kc7` hoặc `letsdefend`), điền `count` (mấy case/alert hôm đó), `note` nếu muốn.
+2. Chọn `platform` (`kc7` hoặc `letsdefend`), điền `count`: với **KC7** là số câu hỏi đã trả lời; với **LetsDefend** là số case đã hoàn thành. Thêm `note` nếu muốn.
 3. Ô `date`: để trống nếu log cho hôm nay, hoặc điền `YYYY-MM-DD` (vd `2026-08-01`) nếu muốn **thêm bù cho ngày trước đó**.
 4. Bấm **Run workflow**. Xong — nó tự thêm dòng vào `activity_log.json`, tự vẽ lại heatmap, tự commit. Mất khoảng 10-15 giây để chạy xong, F5 lại trang profile là thấy.
 
@@ -40,9 +40,9 @@ Muốn bù nhiều ngày liền thì chạy lại workflow nhiều lần, mỗi 
 ### Cách 2: chạy lệnh khi đang ở máy tính
 
 ```bash
-python3 log_activity.py kc7
+python3 log_activity.py kc7 25 "Questions answered in DNS investigation"
 python3 log_activity.py letsdefend 2 "SOC101 alert triage"
-python3 log_activity.py kc7 1 "backfill" --date 2026-08-01
+python3 log_activity.py kc7 42 "Questions answered" --date 2026-08-01
 git add activity_log.json && git commit -m "log activity" && git push
 ```
 Push xong thì workflow `update-heatmap.yml` sẽ tự vẽ lại heatmap.
@@ -52,10 +52,12 @@ Push xong thì workflow `update-heatmap.yml` sẽ tự vẽ lại heatmap.
 Vẫn dùng được khi cần thêm nhiều dòng cùng lúc (vd nhập bù cả tuần), theo mẫu trong `activity_log.example.json`:
 
 ```json
-{"date": "2026-08-13", "platform": "kc7", "count": 1, "note": "Solved: ..."}
+{"date": "2026-08-13", "platform": "kc7", "count": 42, "note": "Questions answered: ..."}
 ```
 
-- `date`: `YYYY-MM-DD` · `platform`: `"kc7"` hoặc `"letsdefend"` · `count`: số case (mặc định 1, không bắt buộc) · `note`: ghi chú riêng, không bắt buộc, không hiển thị lên ảnh.
+- `date`: `YYYY-MM-DD` · `platform`: `"kc7"` hoặc `"letsdefend"` · `count`: số **câu hỏi trả lời** nếu là KC7, hoặc số **case hoàn thành** nếu là LetsDefend · `note`: ghi chú riêng, không bắt buộc, không hiển thị lên ảnh.
+
+Heatmap so sánh theo khối lượng đã chuẩn hoá: **70 câu KC7 = 4 case LetsDefend**. Vì vậy màu của mỗi ngày phản ánh nỗ lực tương đương, còn tooltip và thống kê vẫn hiển thị đơn vị gốc của từng nền tảng.
 
 Dù dùng cách nào, `update-heatmap.yml` cũng tự chạy lại mỗi thứ Hai kể cả không có commit mới, để "current streak" không bị lỗi thời.
 
@@ -69,6 +71,6 @@ Cả hai đều không có API hay badge công khai để nhúng, và trang KC7 
 
 ## 4. Tuỳ chỉnh thêm
 
-- Đổi tông màu banner/heatmap: sửa `color=` trong link `capsule-render` (README) và các mã màu trong `LEVEL_COLORS` (`generate_heatmap.py`).
+- Đổi tông màu banner/heatmap: sửa `color=` trong link `capsule-render` (README) và các mã màu trong `LEVEL_COLORS` (`generate_heatmap.py`). Mặc định đang dùng xanh lam kiểu anime dịu mắt, phù hợp nền GitHub dark.
 - Đổi nội dung giới thiệu, tech stack: sửa trực tiếp trong `README.md`.
-- Muốn thêm nền tảng thứ 3 (vd TryHackMe): chỉ cần dùng `platform` mới trong log, sửa `PLATFORM_COLORS` và dòng thống kê trong `generate_heatmap.py`.
+- Muốn thêm nền tảng thứ 3 (vd TryHackMe): chỉ cần dùng `platform` mới trong log, thêm quy đổi ở hàm `effort_for` và cập nhật dòng thống kê trong `generate_heatmap.py`.

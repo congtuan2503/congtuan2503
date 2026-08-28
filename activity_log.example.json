@@ -1,5 +1,5 @@
 [
-  {"date": "2026-08-10", "platform": "kc7", "count": 1, "note": "Solved: phishing infra case"},
+  {"date": "2026-08-10", "platform": "kc7", "count": 42, "note": "Questions answered: phishing infrastructure case"},
   {"date": "2026-08-11", "platform": "letsdefend", "count": 2, "note": "SOC101 alert triage x2"},
-  {"date": "2026-08-12", "platform": "kc7", "count": 1}
+  {"date": "2026-08-12", "platform": "kc7", "count": 28}
 ]

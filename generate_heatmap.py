@@ -7,8 +7,8 @@ Builds a GitHub-contributions-style SVG heatmap from activity_log.json.
 Why this exists:
 KC7 (kc7cyber.com) and LetsDefend don't expose a public API or embeddable
 badge, so their activity can't be pulled automatically. This script instead
-reads a small JSON log that YOU update by hand each time you solve a case /
-finish an investigation, and turns it into a heatmap + stats block that you
+reads a small JSON log that YOU update by hand, and turns it into a heatmap +
+stats block that you
 embed in your GitHub profile README (image, not live data).
 
 Usage:
@@ -32,14 +32,22 @@ CELL = 11
 GAP = 3
 STEP = CELL + GAP
 LEFT_PAD = 28
-TOP_PAD = 40
-BOTTOM_PAD = 46
+TOP_PAD = 54
+BOTTOM_PAD = 60
 
-LEVEL_COLORS = ["#161b22", "#0d3b3f", "#0e5f61", "#12968f", "#2ee6d6"]
+# Calm anime-blue palette: vivid enough on GitHub's dark background without
+# the visual fatigue of a neon glow.
+LEVEL_COLORS = ["#161b22", "#172554", "#1e40af", "#2563eb", "#60a5fa"]
 EMPTY_COLOR = "#161b22"
-TEXT_COLOR = "#c9d1d9"
-MUTED_COLOR = "#8b949e"
-PLATFORM_COLORS = {"kc7": "#ff8a3d", "letsdefend": "#a78bfa"}
+TEXT_COLOR = "#e2e8f0"
+MUTED_COLOR = "#94a3b8"
+
+# Heatmap intensity is a comparable learning-effort score, not a raw count.
+# A KC7 case averages 70 questions and is treated as the effort of 4
+# LetsDefend cases.
+KC7_QUESTIONS_PER_CASE = 70
+LETSDEFEND_CASES_PER_KC7_CASE = 4
+EFFORT_PER_KC7_QUESTION = LETSDEFEND_CASES_PER_KC7_CASE / KC7_QUESTIONS_PER_CASE
 
 MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -67,6 +75,20 @@ def level_for(count, max_count):
     if ratio <= 0.75:
         return 3
     return 4
+
+
+def effort_for(platform, count):
+    """Return effort in LetsDefend-case equivalents."""
+    if platform == "kc7":
+        return count * EFFORT_PER_KC7_QUESTION
+    if platform == "letsdefend":
+        return count
+    return count
+
+
+def format_number(value):
+    """Format counts cleanly, keeping a single decimal only when needed."""
+    return str(int(value)) if float(value).is_integer() else f"{value:.1f}"
 
 
 def compute_streaks(day_counts, end_date):
@@ -104,10 +126,9 @@ def build_svg(entries):
     start = end - datetime.timedelta(days=370)
     start -= datetime.timedelta(days=(start.weekday() + 1) % 7)  # back to a Sunday
 
-    day_counts = defaultdict(int)
-    day_platforms = defaultdict(set)
+    day_effort = defaultdict(float)
+    day_platform_counts = defaultdict(lambda: defaultdict(int))
     platform_totals = defaultdict(int)
-    total_activities = 0
 
     for e in entries:
         try:
@@ -115,13 +136,14 @@ def build_svg(entries):
         except (KeyError, ValueError):
             continue
         count = int(e.get("count", 1))
+        if count <= 0:
+            continue
         platform = str(e.get("platform", "other")).lower()
-        day_counts[d] += count
-        day_platforms[d].add(platform)
+        day_effort[d] += effort_for(platform, count)
+        day_platform_counts[d][platform] += count
         platform_totals[platform] += count
-        total_activities += count
 
-    max_count = max(day_counts.values(), default=0)
+    max_effort = max(day_effort.values(), default=0)
     weeks = []
     d = start
     while d <= end:
@@ -141,9 +163,13 @@ def build_svg(entries):
     )
     svg.append(f'<rect width="{width}" height="{height}" fill="#0d1117" rx="10"/>')
 
-    title = "SOC Training Activity \u2014 KC7 &amp; LetsDefend"
+    title = "SOC Training Activity \u2014 KC7 questions &amp; LetsDefend cases"
     svg.append(
         f'<text x="{LEFT_PAD}" y="18" fill="{TEXT_COLOR}" font-size="13" font-weight="600">{title}</text>'
+    )
+    svg.append(
+        f'<text x="{LEFT_PAD}" y="32" fill="{MUTED_COLOR}" font-size="10">'
+        f'Normalized effort: {KC7_QUESTIONS_PER_CASE} KC7 questions = {LETSDEFEND_CASES_PER_KC7_CASE} LetsDefend cases</text>'
     )
 
     # month labels
@@ -170,36 +196,44 @@ def build_svg(entries):
                 continue
             x = LEFT_PAD + wi * STEP
             y = TOP_PAD + di * STEP
-            count = day_counts.get(day, 0)
-            color = LEVEL_COLORS[level_for(count, max_count)] if count else EMPTY_COLOR
-            plats = day_platforms.get(day, set())
-            title_txt = f"{day.isoformat()}: {count} activity" if count else f"{day.isoformat()}: no activity"
-            if plats:
-                title_txt += f" ({', '.join(sorted(plats))})"
+            effort = day_effort.get(day, 0)
+            color = LEVEL_COLORS[level_for(effort, max_effort)] if effort else EMPTY_COLOR
+            raw = day_platform_counts.get(day, {})
+            if raw:
+                details = []
+                if raw.get("kc7"):
+                    details.append(f"KC7: {raw['kc7']} questions")
+                if raw.get("letsdefend"):
+                    details.append(f"LetsDefend: {raw['letsdefend']} cases")
+                for platform, count in sorted(raw.items()):
+                    if platform not in {"kc7", "letsdefend"}:
+                        details.append(f"{platform}: {count}")
+                title_txt = f"{day.isoformat()}: {'; '.join(details)} ({format_number(effort)} effort)"
+            else:
+                title_txt = f"{day.isoformat()}: no activity"
             svg.append(
                 f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" ry="2" '
                 f'fill="{color}"><title>{title_txt}</title></rect>'
             )
 
     # legend
-    legend_y = height - 30
-    svg.append(f'<text x="{LEFT_PAD}" y="{legend_y + 9}" fill="{MUTED_COLOR}" font-size="10">Less</text>')
+    legend_y = height - 46
+    svg.append(f'<text x="{LEFT_PAD}" y="{legend_y + 9}" fill="{MUTED_COLOR}" font-size="10">Less effort</text>')
     lx = LEFT_PAD + 32
     for lvl, color in enumerate(LEVEL_COLORS):
         svg.append(f'<rect x="{lx}" y="{legend_y}" width="{CELL}" height="{CELL}" rx="2" fill="{color}"/>')
         lx += STEP
-    svg.append(f'<text x="{lx + 4}" y="{legend_y + 9}" fill="{MUTED_COLOR}" font-size="10">More</text>')
+    svg.append(f'<text x="{lx + 4}" y="{legend_y + 9}" fill="{MUTED_COLOR}" font-size="10">More effort</text>')
 
     # stats line
-    current_streak, longest_streak = compute_streaks(day_counts, today)
+    current_streak, longest_streak = compute_streaks(day_effort, today)
     kc7_total = platform_totals.get("kc7", 0)
     ld_total = platform_totals.get("letsdefend", 0)
-    stats_txt = (
-        f"{total_activities} logged this year   \u2022   "
-        f"KC7: {kc7_total}   \u2022   LetsDefend: {ld_total}   \u2022   "
-        f"current streak: {current_streak}d   \u2022   longest streak: {longest_streak}d"
-    )
-    svg.append(f'<text x="{LEFT_PAD}" y="{height - 8}" fill="{TEXT_COLOR}" font-size="10">{stats_txt}</text>')
+    total_effort = sum(day_effort.values())
+    stats_txt = f"KC7: {kc7_total} questions   \u2022   LetsDefend: {ld_total} cases   \u2022   Total: {format_number(total_effort)} LD-case equivalent"
+    streak_txt = f"current streak: {current_streak}d   \u2022   longest streak: {longest_streak}d"
+    svg.append(f'<text x="{LEFT_PAD}" y="{height - 21}" fill="{TEXT_COLOR}" font-size="10">{stats_txt}</text>')
+    svg.append(f'<text x="{LEFT_PAD}" y="{height - 7}" fill="{MUTED_COLOR}" font-size="10">{streak_txt}</text>')
 
     svg.append("</svg>")
     return "\n".join(svg)

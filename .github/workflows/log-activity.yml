@@ -11,7 +11,7 @@ on:
           - kc7
           - letsdefend
       count:
-        description: "How many cases/alerts today"
+        description: "KC7: questions answered | LetsDefend: cases completed"
         required: false
         default: "1"
       date:
