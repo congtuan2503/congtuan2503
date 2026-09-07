@@ -1,10 +1,5 @@
 [
   {
-    "date": "2026-07-15",
-    "platform": "kc7",
-    "count": 70
-  },
-  {
     "date": "2026-07-11",
     "platform": "letsdefend",
     "count": 1,
@@ -21,6 +16,11 @@
     "platform": "letsdefend",
     "count": 4,
     "note": "SOC167, SOC169, SOC170, SOC325"
+  },
+  {
+    "date": "2026-07-15",
+    "platform": "kc7",
+    "count": 70
   },
   {
     "date": "2026-07-15",
@@ -47,21 +47,15 @@
     "note": "SOC109 - Emotet Malware Detected; SOC287 - Arbitrary File Read on Checkpoint Security Gateway"
   },
   {
+    "date": "2026-07-19",
+    "platform": "kc7",
+    "count": 280
+  },
+  {
     "date": "2026-07-20",
     "platform": "letsdefend",
     "count": 1,
     "note": "SOC145 - Ransomware Detected"
-  },
-  {
-    "date": "2026-08-01",
-    "platform": "letsdefend",
-    "count": 1,
-    "note": "SOC274 - Palo Alto PAN-OS Command Injection Vulnerability Exploitation (CVE-2024-3400)"
-  },
-  {
-    "date": "2026-07-19",
-    "platform": "kc7",
-    "count": 280
   },
   {
     "date": "2026-07-20",
@@ -92,6 +86,12 @@
     "date": "2026-07-28",
     "platform": "kc7",
     "count": 280
+  },
+  {
+    "date": "2026-08-01",
+    "platform": "letsdefend",
+    "count": 1,
+    "note": "SOC274 - Palo Alto PAN-OS Command Injection Vulnerability Exploitation (CVE-2024-3400)"
   },
   {
     "date": "2026-08-01",
@@ -142,5 +142,10 @@
     "date": "2026-08-28",
     "platform": "kc7",
     "count": 4
+  },
+  {
+    "date": "2026-09-06",
+    "platform": "letsdefend",
+    "count": 1
   }
 ]
