@@ -391,6 +391,10 @@
 <rect x="756" y="138" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-09-05: no activity</title></rect>
 <rect x="770" y="54" width="11" height="11" rx="2" ry="2" fill="#172554"><title>2026-09-06: LetsDefend: 1 cases (1 effort)</title></rect>
 <rect x="770" y="68" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-09-07: no activity</title></rect>
+<rect x="770" y="82" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-09-08: no activity</title></rect>
+<rect x="770" y="96" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-09-09: no activity</title></rect>
+<rect x="770" y="110" width="11" height="11" rx="2" ry="2" fill="#161b22"><title>2026-09-10: no activity</title></rect>
+<rect x="770" y="124" width="11" height="11" rx="2" ry="2" fill="#172554"><title>2026-09-11: LetsDefend: 1 cases (1 effort)</title></rect>
 <text x="28" y="175" fill="#94a3b8" font-size="10">Less effort</text>
 <rect x="60" y="166" width="11" height="11" rx="2" fill="#161b22"/>
 <rect x="74" y="166" width="11" height="11" rx="2" fill="#172554"/>
@@ -398,6 +402,6 @@
 <rect x="102" y="166" width="11" height="11" rx="2" fill="#2563eb"/>
 <rect x="116" y="166" width="11" height="11" rx="2" fill="#60a5fa"/>
 <text x="134" y="175" fill="#94a3b8" font-size="10">More effort</text>
-<text x="28" y="191" fill="#e2e8f0" font-size="10">KC7: 2713 questions   •   LetsDefend: 16 cases   •   Total: 171.0 LD-case equivalent</text>
+<text x="28" y="191" fill="#e2e8f0" font-size="10">KC7: 2713 questions   •   LetsDefend: 17 cases   •   Total: 172.0 LD-case equivalent</text>
 <text x="28" y="205" fill="#94a3b8" font-size="10">current streak: 1d   •   longest streak: 5d</text>
 </svg>
