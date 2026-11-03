@@ -47,7 +47,7 @@
 ### Featured projects
 
 - [**homelab-setup-writeup**](https://github.com/congtuan2503/homelab-setup-writeup) — Documentation of a SOC homelab setup with Wazuh and two endpoints.
-- [**VulnScanner**](https://github.com/congtuan2503/VulnScanner) — Automated web application security scanner.
+- [**malware-analysis-homelab**](https://github.com/congtuan2503/malware-analysis-homelab) — Isolated Windows FLARE-VM and REMnux homelab with INetSim validation, troubleshooting notes, and screenshot evidence.
 - [**AutoSQLi**](https://github.com/congtuan2503/AutoSQLi) — Automated SQL injection exploitation tool.
 
 <div align="center">
