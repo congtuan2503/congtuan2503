@@ -11,7 +11,7 @@
 
 ### About me
 
-- Third-year **Computer Science** student at **Bach Khoa University (HCMUT)**, Ho Chi Minh City
+- Forth-year **Computer Science** student at **Bach Khoa University (HCMUT)**, Ho Chi Minh City
 - Building toward a junior **SOC / Blue Team** role, with **Cloud Security** as the longer-term goal
 - Learn by building: homelab investigations, incident write-ups, and hands-on labs over theory alone
 - Currently running detection use cases in a self-built **Wazuh** SOC homelab, and sharpening investigation skills on **KC7** and **LetsDefend**
