@@ -152,5 +152,11 @@
     "date": "2026-09-11",
     "platform": "letsdefend",
     "count": 1
+  },
+  {
+    "date": "2026-11-17",
+    "platform": "kc7",
+    "count": 65,
+    "note": "completed Titan Shield: A showcase of Microsoft Defender XDR"
   }
 ]
