@@ -158,5 +158,10 @@
     "platform": "kc7",
     "count": 65,
     "note": "completed Titan Shield: A showcase of Microsoft Defender XDR"
+  },
+  {
+    "date": "2026-11-18",
+    "platform": "kc7",
+    "count": 34
   }
 ]
