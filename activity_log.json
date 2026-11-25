@@ -168,5 +168,11 @@
     "date": "2026-11-19",
     "platform": "kc7",
     "count": 8
+  },
+  {
+    "date": "2026-11-25",
+    "platform": "kc7",
+    "count": 32,
+    "note": "completed Critical Compromise In Chicago - ICS"
   }
 ]
